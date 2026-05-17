@@ -1,4 +1,7 @@
 package com.vu.androidbasicapp.ui.login
 
-class LoginUiState {
-}
+data class LoginUiState(
+    val isLoading: Boolean = false,
+    val errorMessage: String? = null,
+    val keypass: String? = null
+)
