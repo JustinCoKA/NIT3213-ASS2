@@ -21,6 +21,10 @@
             android:exported="false" />
 
         <activity
+            android:name=".ui.details.DetailsActivity"
+            android:exported="false"/>
+
+        <activity
             android:name=".ui.login.LoginActivity"
             android:exported="true">
             <intent-filter>

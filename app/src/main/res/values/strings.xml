@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Android basic app</string>
+    <string name="details_header">Details</string>
+    <string name="details_description_label">Description</string>
+    <string name="details_default_title">Entity Details</string>
+    <string name="details_missing_title">Missing Details</string>
+    <string name="details_missing_message">No entity data was provided.</string>
+    <string name="details_no_description">No description available.</string>
+    <string name="details_not_available">N/A</string>
 </resources>

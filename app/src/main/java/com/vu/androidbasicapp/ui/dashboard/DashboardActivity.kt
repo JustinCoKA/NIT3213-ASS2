@@ -11,6 +11,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.vu.androidbasicapp.R
 import dagger.hilt.android.AndroidEntryPoint
+import android.content.Intent
+import com.vu.androidbasicapp.ui.details.DetailsActivity
+import org.json.JSONObject
 
 @AndroidEntryPoint
 class DashboardActivity : AppCompatActivity() {
@@ -46,12 +49,13 @@ class DashboardActivity : AppCompatActivity() {
 
     private fun setupRecyclerView() {
         entityAdapter = EntityAdapter { entity ->
-            // Step 11에서 DetailsActivity 이동 코드로 교체
-            Toast.makeText(
-                this,
-                "Details screen will be implemented in Step 11.",
-                Toast.LENGTH_SHORT
-            ).show()
+            val intent = Intent(this, DetailsActivity::class.java).apply {
+                putExtra(
+                    DetailsActivity.EXTRA_ENTITY_JSON,
+                    JSONObject(entity).toString()
+                )
+            }
+            startActivity(intent)
         }
 
         rvEntities.apply {
